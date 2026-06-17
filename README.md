@@ -1,6 +1,6 @@
 # Superbuyer — Company Website
 
-The official website for **New Superbuyer Inc.** (brand: *Superbuyer*) — an AI robotics
+The official website for **Superbuyer Inc.** (brand: *Superbuyer*) — an AI robotics
 company building autonomous food & grocery delivery.
 
 🌐 Live: https://superbuyerai.com
