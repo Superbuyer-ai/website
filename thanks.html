@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thank you — Superbuyer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand"><span class="logo"></span>Superbuyer</a>
+    <div class="nav-links">
+      <a href="index.html#technology">Technology</a>
+      <a href="index.html#value">For Business</a>
+      <a href="index.html#company">Company</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero" style="padding:120px 0 140px;text-align:center">
+  <div class="dotgrid"></div>
+  <div class="wrap" style="max-width:680px">
+    <div class="eyebrow reveal" style="margin:0 auto"><span class="pulse"></span><span class="t">MESSAGE RECEIVED</span></div>
+    <h1 class="reveal" style="margin-left:auto;margin-right:auto">Thanks — we'll be <span class="grad">in touch.</span></h1>
+    <p class="lead reveal" style="margin:26px auto 0">Your message is on its way to our team. We'll get back to you within one business day. In the meantime, feel free to explore what we're building.</p>
+    <div class="hero-cta reveal" style="justify-content:center">
+      <a href="index.html" class="btn">Back to home →</a>
+      <a href="index.html#technology" class="btn ghost">See the technology</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach((e)=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Superbuyer</title>
+<meta name="description" content="Get in touch with Superbuyer. Partner with us to bring autonomous food and grocery delivery to your business." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand"><span class="logo"></span>Superbuyer</a>
+    <div class="nav-links">
+      <a href="index.html#technology">Technology</a>
+      <a href="index.html#value">For Business</a>
+      <a href="index.html#company">Company</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="#form" class="btn">Partner with us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="dotgrid"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="pulse"></span><span class="t">CONTACT · BAY AREA, USA</span></div>
+    <h1 class="reveal">Let's talk about your <span class="grad">last mile.</span></h1>
+    <p class="lead reveal">Whether you run a single restaurant or a national retail network, our team would love to explore how Superbuyer can power autonomous delivery for your business.</p>
+  </div>
+</div>
+
+<section style="padding-top:40px">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- INFO COLUMN -->
+      <div class="reveal">
+        <div class="info-list">
+          <div class="info-item">
+            <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:hello@superbuyer.com">hello@superbuyer.com</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+10000000000">+1 (000) 000-0000</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <div>
+              <h4>Headquarters</h4>
+              <p>New Superbuyer Inc.<span>Bay Area, California, USA</span></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <div>
+              <h4>Hours</h4>
+              <p>Monday – Friday<span>9:00 AM – 6:00 PM (PT)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map" aria-label="Bay Area, California">
+          <div class="dotgrid"></div>
+          <div class="pin">
+            <div class="dot"></div>
+            <span>Bay Area, CA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM COLUMN -->
+      <div class="reveal" id="form">
+        <div class="form-card">
+          <h3>Send us a message</h3>
+          <p class="sub">Fill out the form and we'll get back to you within one business day.</p>
+
+          <!-- Works automatically when deployed to Netlify (Netlify Forms). -->
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+            <div class="two">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+              </div>
+              <div class="field">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" placeholder="Your business" />
+              </div>
+            </div>
+
+            <div class="two">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@company.com" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+1 (000) 000-0000" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="type">I'm interested in</label>
+              <select id="type" name="interest">
+                <option>Partnering my business</option>
+                <option>Requesting a demo</option>
+                <option>Press / media</option>
+                <option>Careers</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us a bit about your business and what you're looking for…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send message →</button>
+            <p class="form-note">We'll never share your information. By submitting, you agree to be contacted by Superbuyer.</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="index.html" class="brand"><span class="logo"></span>Superbuyer</a>
+        <p class="blurb">An AI robotics company revolutionizing local commerce through autonomous food and grocery delivery.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Company</h5>
+          <a href="index.html#technology">Technology</a>
+          <a href="index.html#value">For Business</a>
+          <a href="index.html#company">Mission &amp; Vision</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <a href="mailto:hello@superbuyer.com">hello@superbuyer.com</a>
+          <a href="tel:+10000000000">+1 (000) 000-0000</a>
+          <a href="contact.html">Bay Area, California</a>
+        </div>
+        <div class="foot-col">
+          <h5>Follow</h5>
+          <a href="#">LinkedIn</a>
+          <a href="#">X / Twitter</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 New Superbuyer Inc. All rights reserved.</span>
+      <span>Privacy · Terms</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
+  const io=new IntersectionObserver((es)=>{
+    es.forEach((e)=>{
+      if(e.isIntersecting){
+        const sibs=[...e.target.parentElement.children].filter(c=>c.classList.contains('reveal'));
+        e.target.style.transitionDelay=(Math.max(0,sibs.indexOf(e.target))*70)+'ms';
+        e.target.classList.add('in');io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
