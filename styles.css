@@ -233,3 +233,59 @@ footer{border-top:1px solid var(--line);padding:54px 0 56px}
 @media(max-width:480px){.two{grid-template-columns:1fr}}
 .form-card .btn{width:100%;justify-content:center;margin-top:8px;padding:15px}
 .form-note{font-size:13px;color:var(--ink-soft);margin-top:14px;text-align:center}
+
+/* ============ LOGO IMAGE ============ */
+.brand{gap:0}
+.brand .logo-img{height:30px;width:auto;display:block}
+.foot .brand .logo-img{height:30px}
+@media(max-width:520px){.brand .logo-img{height:26px}}
+
+/* ============ HERO VISION CARD ============ */
+.vision{margin-top:60px;background:var(--night);border-radius:22px;padding:26px 28px 28px;color:#fff;
+  position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.vision .dotgrid{position:absolute;inset:0;opacity:.18;background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1px)}
+.vision-top{display:flex;justify-content:space-between;align-items:center;position:relative;flex-wrap:wrap;gap:12px}
+.vision-top .mono{font-size:12.5px;letter-spacing:.12em;color:rgba(255,255,255,.55);text-transform:uppercase}
+.vision-top .live{display:inline-flex;align-items:center;gap:8px;font-family:"JetBrains Mono",monospace;font-size:12.5px;color:#7ef2c0}
+.vision-top .live::before{content:"";width:8px;height:8px;border-radius:50%;background:#7ef2c0;box-shadow:0 0 0 0 rgba(126,242,192,.6);animation:beat 1.6s infinite}
+.viewport{position:relative;margin-top:20px;border-radius:14px;overflow:hidden;
+  background:radial-gradient(120% 140% at 70% 0%,rgba(31,91,255,.20),transparent 60%),#0b1020;
+  border:1px solid rgba(255,255,255,.08)}
+.viewport svg{display:block;width:100%;height:auto}
+.viewport .scanline{animation:scanY 3.4s ease-in-out infinite}
+@keyframes scanY{0%{transform:translateY(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(232px);opacity:0}}
+.det-tag{position:absolute;font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:600;
+  padding:2px 7px;border-radius:5px;color:#04121a;white-space:nowrap;transform:translateY(-118%)}
+.det-tag.t1{left:14.2%;top:57.9%;background:#13c6d6}
+.det-tag.t2{left:57.7%;top:41.4%;background:#7ef2c0}
+.vision-foot{display:flex;gap:40px;margin-top:20px;position:relative;flex-wrap:wrap}
+.vision-foot div .k{font-family:"Sora";font-weight:600;font-size:24px}
+.vision-foot div .v{font-size:13px;color:rgba(255,255,255,.55);margin-top:2px}
+@media(prefers-reduced-motion:reduce){.viewport .scanline{animation:none;opacity:.7}}
+
+/* ============ PRODUCTS ============ */
+.products{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:860px){.products{grid-template-columns:1fr}}
+.product{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px 32px;
+  box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.product:hover{transform:translateY(-6px);box-shadow:0 28px 60px -22px rgba(31,91,255,.35)}
+.prod-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.prod-no{font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:.14em;color:var(--accent)}
+.pill{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.05em;
+  text-transform:uppercase;padding:5px 11px;border-radius:100px}
+.pill-core{color:#0a4d2c;background:rgba(126,242,192,.22);border:1px solid rgba(46,125,50,.25)}
+.pill-dev{color:var(--ink-soft);background:var(--bg-2);border:1px solid var(--line)}
+.product h3{font-family:"Sora";font-weight:600;font-size:25px;letter-spacing:-.015em;margin:18px 0 12px}
+.product>p{color:var(--ink-soft);font-size:15.5px}
+.product>p b{color:var(--ink);font-weight:600}
+.prod-list{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.prod-list li{position:relative;padding-left:26px;font-size:15px;color:var(--ink)}
+.prod-list li::before{content:"";position:absolute;left:0;top:8px;width:13px;height:13px;border-radius:4px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+.prod-list .mono{font-size:13px;background:var(--bg-2);padding:1px 6px;border-radius:5px;color:var(--accent)}
+.prod-for{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:14.5px;color:var(--ink)}
+.prod-for span{display:block;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.prod-link{margin-top:22px;align-self:flex-start;color:var(--accent);text-decoration:none;font-weight:600;font-size:15px;
+  transition:gap .2s}
+.prod-link:hover{text-decoration:underline}

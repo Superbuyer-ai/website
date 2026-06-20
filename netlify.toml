@@ -1,0 +1,17 @@
+# Netlify build & deploy config — static site, files served from repo root.
+[build]
+  publish = "."
+  command = ""
+
+# Long-cache the logo/image assets (content-hashed by filename when they change).
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Friendly shortcut to the public tech demo.
+[[redirects]]
+  from = "/demo"
+  to = "https://superbuyer-ai.github.io/demo/"
+  status = 302
+  force = false
