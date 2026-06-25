@@ -11,3 +11,6 @@ Thumbs.db
 
 # kept-but-unused image originals
 image-archive/
+
+# local hero-image generator (output hero-phone.jpg is committed)
+make_hero_phone.py

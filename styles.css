@@ -83,7 +83,13 @@ header .dotgrid{position:absolute;inset:0;z-index:1;opacity:.5;
 @keyframes ping{to{transform:scale(2.8);opacity:0}}
 .eyebrow span.t{font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:.1em;color:var(--ink-soft)}
 .hero-copy{position:relative;z-index:2;max-width:600px}
-@media(max-width:1180px) and (min-width:981px){.hero-copy{max-width:50%}}
+/* 2-column hero: copy left, phone visual right */
+.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:48px;align-items:center;position:relative;z-index:2}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-copy{max-width:640px}}
+.hero-visual{position:relative;animation:slideInRight 1s cubic-bezier(.22,.61,.36,1) both;animation-delay:.12s}
+.hero-visual img{display:block;width:100%;height:auto;border-radius:22px;box-shadow:var(--shadow)}
+@keyframes slideInRight{from{opacity:0;transform:translateX(72px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-visual{animation:none}}
 h1{font-family:"Sora",sans-serif;font-weight:700;font-size:clamp(40px,6vw,78px);
   line-height:1.04;letter-spacing:-.035em;margin:28px 0 0}
 h1 .grad{background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -108,11 +114,15 @@ h1 .grad{background:linear-gradient(120deg,var(--accent),var(--accent-2));-webki
 .route-foot div .v{font-size:13.5px;color:rgba(255,255,255,.55);margin-top:2px}
 
 /* ---------- LOGO STRIP ---------- */
-.strip{padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:48px}
-.strip .wrap{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:space-between}
-.strip p{font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
-.strip .who{display:flex;gap:34px;flex-wrap:wrap}
-.strip .who span{font-family:"Sora";font-weight:600;font-size:18px;color:var(--ink);opacity:.62}
+.strip{padding:56px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:48px}
+.strip .wrap{display:block}
+.strip p{font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:26px}
+.strip .who{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.who-card{position:relative;display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
+.who-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.22,.61,.36,1)}
+.who-card:hover img{transform:scale(1.05)}
+.who-card span{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;font-family:"Sora";font-weight:600;font-size:16px;color:#fff;background:linear-gradient(to top,rgba(8,12,22,.86),rgba(8,12,22,0))}
+@media(max-width:760px){.strip .who{grid-template-columns:repeat(2,1fr)}}
 
 /* ---------- SECTION ---------- */
 section{padding:100px 0}
@@ -182,6 +192,14 @@ footer{border-top:1px solid var(--line);padding:54px 0 56px}
 .foot-col a{display:block;color:var(--ink);text-decoration:none;font-size:15px;margin-bottom:11px;transition:color .2s}
 .foot-col a:hover{color:var(--accent)}
 .copyright{margin-top:46px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.copyright a{color:var(--ink-soft);text-decoration:none;transition:color .2s}
+.copyright a:hover{color:var(--ink)}
+.legal{max-width:760px;margin:0 auto;padding:6px 0 40px}
+.legal .updated{font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:26px}
+.legal h2{font-family:"Sora";font-weight:700;font-size:21px;margin:36px 0 10px;color:var(--ink)}
+.legal p,.legal li{color:var(--ink-soft);font-size:15.5px;line-height:1.72;margin:0 0 14px}
+.legal ul{margin:0 0 14px;padding-left:20px}
+.legal a{color:var(--ink);text-decoration:underline}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
