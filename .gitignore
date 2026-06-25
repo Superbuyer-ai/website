@@ -8,3 +8,6 @@ Thumbs.db
 # Logs / temp
 *.log
 .netlify/
+
+# kept-but-unused image originals
+image-archive/
