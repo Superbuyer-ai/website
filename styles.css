@@ -229,13 +229,11 @@ footer{border-top:1px solid var(--line);padding:54px 0 56px}
 .info-item a:hover{color:var(--accent)}
 .info-item p span{display:block;font-weight:400;font-size:15px;color:var(--ink-soft)}
 
-.map{margin-top:6px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);
-  height:220px;position:relative;background:var(--night)}
-.map .dotgrid{position:absolute;inset:0;opacity:.2;background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1px)}
-.map .pin{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);text-align:center}
-.map .pin .dot{width:18px;height:18px;border-radius:50%;background:var(--accent-2);margin:0 auto;position:relative;box-shadow:0 0 0 6px rgba(19,198,214,.2)}
-.map .pin .dot::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--accent-2);opacity:.5;animation:ping 2s ease-out infinite}
-.map .pin span{display:block;margin-top:12px;font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.12em;color:rgba(255,255,255,.75);text-transform:uppercase}
+.map{margin-top:6px;display:block;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);
+  height:280px;position:relative;background:var(--night);text-decoration:none}
+.map img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s cubic-bezier(.22,.61,.36,1)}
+.map:hover img{transform:scale(1.04)}
+.map-tag{position:absolute;left:12px;bottom:12px;z-index:2;padding:7px 12px;border-radius:999px;background:rgba(10,16,26,.82);color:#fff;font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.05em}
 
 /* form column */
 .form-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:38px 36px;box-shadow:var(--shadow)}
